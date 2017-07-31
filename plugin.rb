@@ -309,7 +309,7 @@ after_initialize do
 
 			else
 
-				oldField = UserCustomField.create(user_id: user_id, name: "user_field_#{user_field_id[0]["id"]}")
+				oldField = UserCustomField.where(user_id: user_id, name: "user_field_#{user_field_id[0]["id"]}").first
 				oldField.value = "#{personality}"
 				oldField.save
 
