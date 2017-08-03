@@ -16,9 +16,9 @@ after_initialize do
 		end
 	end
 
-	SiteSetting.class_eval do
-		@choices[:layouts_sidebar_left_widgets].push('widget-gamification')
-	end
+	#SiteSetting.class_eval do
+	#	@choices[:layouts_sidebar_left_widgets].push('widget-gamification')
+	#end
 
 	class WidgetGamification::GamificationController < ::ApplicationController
 		skip_before_filter :preload_json, :check_xhr
