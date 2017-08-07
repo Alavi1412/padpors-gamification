@@ -19,6 +19,7 @@ after_initialize do
 	#SiteSetting.class_eval do
 	#	@choices[:layouts_sidebar_left_widgets].push('widget-gamification')
 	#end
+	DiscourseLayouts::WidgetHelper.add_widget('widget-gamification')
 
 	class WidgetGamification::GamificationController < ::ApplicationController
 		skip_before_filter :preload_json, :check_xhr
